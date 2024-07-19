@@ -1,5 +1,7 @@
 // Import the framework and instantiate it
 import Fastify from "fastify";
+const port = process.env.PORT || 7001;
+
 const fastify = Fastify({
   logger: true,
 });
@@ -17,7 +19,7 @@ fastify.post("/reservation", async function handler(request, reply) {
 
 // Run the server!
 try {
-  await fastify.listen({ port: 7001 });
+  await fastify.listen({ port });
 } catch (err) {
   fastify.log.error(err);
   process.exit(1);
