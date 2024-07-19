@@ -1,6 +1,6 @@
 // Import the framework and instantiate it
 import Fastify from "fastify";
-const port = process.env.PORT || 7001;
+const port = process.env.PORT || 4000;
 
 const fastify = Fastify({
   logger: true,
