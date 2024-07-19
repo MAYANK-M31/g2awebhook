@@ -19,7 +19,7 @@ fastify.post("/reservation", async function handler(request, reply) {
 
 // Run the server!
 try {
-  await fastify.listen({ port });
+  await fastify.listen({ port, host: "0.0.0.0" });
   console.log(`Server listening on ${port}`);
 } catch (err) {
   fastify.log.error(err);
