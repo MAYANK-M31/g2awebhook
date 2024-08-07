@@ -17,6 +17,12 @@ fastify.post("/g2a/reservation", async function handler(request, reply) {
   return { success: true };
 });
 
+// Oauth a route
+fastify.get("/g2a/oauth/token", async function handler(request, reply) {
+  console.log("OAUTH-PAYLOAD", request.body, request.query, request.params);
+  return { success: true };
+});
+
 // Run the server!
 try {
   await fastify.listen({ port, host: "0.0.0.0" });
