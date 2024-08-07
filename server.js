@@ -12,7 +12,7 @@ fastify.get("/", async function handler(request, reply) {
 });
 
 // Declare a route
-fastify.post("/g2a/reservation", async function handler(request, reply) {
+fastify.post("/reservation", async function handler(request, reply) {
   console.log("PAYLOAD", request.body, request.query, request.params);
   return { success: true };
 });
